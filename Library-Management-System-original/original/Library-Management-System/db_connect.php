@@ -1,0 +1,11 @@
+<?php
+// Opens the MySQL connection used by every page/controller
+$host = "localhost";
+$db   = "library_db";
+$user = "root";
+$pass = "";
+
+$conn = new mysqli($host, $user, $pass, $db);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
